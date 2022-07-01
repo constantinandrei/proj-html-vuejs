@@ -1,7 +1,7 @@
 <template>
     <div class="pt-3 pb-5">
         <div class="container">
-            <h2 class="text-center py-5">Workin <span>process</span></h2>
+            <h2 class="text-center py-5">Working <span>process</span></h2>
             <div class="w-75 m-auto position-relative">
                 <div class="row row-cols-4">
                     <ProcessCard
