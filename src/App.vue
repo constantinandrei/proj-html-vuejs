@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <TheNav></TheNav>
     <TheHeader></TheHeader>
     <TheMain></TheMain>
     <TheFooter></TheFooter>
@@ -10,6 +11,7 @@
 import TheHeader from './components/TheHeader.vue';
 import TheMain from './components/TheMain.vue';
 import TheFooter from './components/TheFooter.vue';
+import TheNav from './components/TheNav.vue';
 
 
 export default {
@@ -17,10 +19,11 @@ export default {
   components: {
     TheHeader,
     TheMain,
-    TheFooter
+    TheFooter,
+    TheNav
 },
   created(){
-    document.title = 'Mareé'
+    document.title = 'Mareé | Constantin Andrei Todirascu'
   }
 }
 </script>
