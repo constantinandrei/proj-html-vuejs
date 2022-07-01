@@ -1,2 +1,17 @@
 @import 'variables';
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+.btn {
+    font-size: .6rem;
+    padding: .7rem 2rem;
+    letter-spacing: 1px;
+    border-radius: 0px;
+}
+
+.btn-outline {
+    border: 2px solid $secondary;
+}
+
+.letter-spacing {
+    letter-spacing: 2px;
+}
