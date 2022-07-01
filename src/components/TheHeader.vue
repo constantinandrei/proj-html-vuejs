@@ -1,10 +1,10 @@
 <template>
-    <div class="section position-relative p-5">
+    <div class="section position-relative py-5">
         <div class="container">
-            <div class="row row-cols-2">
+            <div class="row row-cols-1 row-cols-lg-2">
                 <div class="col row align-items-center">
                     <div class="col">
-                        <div class="p-5">
+                        <div class="py-5 pe-5">
                             <h1 class="letter-spacing">Devotion that never <span>ends</span></h1>
                             <p class="text-muted py-3">Nesque porro quisquantum est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi.</p>
                             <div class="btn btn-outline">READ MORE</div>
@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="p-5 h-100">
+                    <div class="py-5 ps-5 h-100 personal-height">
                         <JumboImage></JumboImage>
                     </div>
                 </div>
@@ -55,6 +55,9 @@ import JumboImage from './JumboImage.vue';
         }
     }
 
+    .personal-height {
+        min-height: 299px;
+    }
     .slider-point{
         width: 7px;
         height: 7px;

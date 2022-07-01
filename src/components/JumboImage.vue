@@ -1,5 +1,5 @@
 <template>
-    <div class="h-100 position-relative">
+    <div class="h-100 position-relative m-auto">
         <img class="woman" src="img/h-2-slider-img-15.png" alt="">
         <img class="man" src="img/h-2-slider-img-16.png" alt="">
         <img class="left-top" src="img/short-slider-rev-1-img-2.png" alt="">
@@ -22,6 +22,12 @@
         position: absolute;
     }
 
+    .position-relative {
+        min-height: 297px;
+        max-height: 300px;
+        min-width: 510px;
+        max-width: 520px;
+    }
     .woman {
         top: 0;
         left: 0;
