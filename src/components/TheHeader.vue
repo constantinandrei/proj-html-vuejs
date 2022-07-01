@@ -79,6 +79,7 @@ import JumboImage from './JumboImage.vue';
         align-items: center;
         justify-content: center;
         font-size: .7rem;
+        cursor: pointer;
         &.left {
             left: 30px;
         }
