@@ -1,20 +1,25 @@
 <template>
-    <div class="py-3">
+    <div class="pt-3 pb-5">
         <div class="container">
+            <h2 class="text-center py-5">Workin <span>process</span></h2>
             <div class="w-75 m-auto position-relative">
                 <div class="row row-cols-4">
                     <ProcessCard
                     :icon-class="'fa-solid fa-lightbulb'"
-                    :icon-color="'#BADAC9'" ></ProcessCard>
+                    :icon-color="'#BADAC9'"
+                    :card-title="'First there\'s an idea'" ></ProcessCard>
                     <ProcessCard
                     :icon-class="'fa-regular fa-comment'"
-                    :icon-color="'#F8D12D'" ></ProcessCard>
+                    :icon-color="'#F8D12D'"
+                    :card-title="'Then we talk about'" ></ProcessCard>
                     <ProcessCard
                     :icon-class="'fa-solid fa-cloud'"
-                    :icon-color="'#80465F'" ></ProcessCard>
+                    :icon-color="'#80465F'"
+                    :card-title="'And we think about'" ></ProcessCard>
                     <ProcessCard
                     :icon-class="'fa-solid fa-pencil'"
-                    :icon-color="'#EB6950'" ></ProcessCard>
+                    :icon-color="'#EB6950'"
+                    :card-title="'So we draw along'" ></ProcessCard>
                 </div>
                 <div class="my-position-absolute">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1095.3 126">
@@ -43,5 +48,15 @@ import ProcessCard from './ProcessCard.vue';
         right: 8%;
         bottom: 0;
         left: 8%;
+    }
+
+    h2 {
+        font-size: 3rem;
+
+        span {
+            font-family: 'Comic Sans MS';
+            font-weight: bold;
+            font-style: italic;
+        }
     }
 </style>

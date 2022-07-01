@@ -51,6 +51,7 @@ import JumboImage from './JumboImage.vue';
         span {
             font-weight: bold;
             font-style: italic;
+            font-family: 'Comic Sans MS';
         }
     }
 
