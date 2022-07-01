@@ -12,7 +12,9 @@
                     </div>
                 </div>
                 <div class="col">
-                    <JumboImage></JumboImage>
+                    <div class="p-5 h-100">
+                        <JumboImage></JumboImage>
+                    </div>
                 </div>
             </div>
         </div>
