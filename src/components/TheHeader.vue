@@ -5,7 +5,7 @@
                 <div class="col row align-items-center">
                     <div class="col">
                         <div class="p-5">
-                            <h1 class="letter-spacing">Devotion thad never <span>ends</span></h1>
+                            <h1 class="letter-spacing">Devotion that never <span>ends</span></h1>
                             <p class="text-muted py-3">Nesque porro quisquantum est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi.</p>
                             <div class="btn btn-outline">READ MORE</div>
                         </div>
