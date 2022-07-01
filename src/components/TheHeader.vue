@@ -17,6 +17,18 @@
                     </div>
                 </div>
             </div>
+            <div class="row w-25 align-items-center justify-content-center m-auto">
+                <div v-for="(num, i) in 3" :key="'point' + num"  class="col col-1">
+                    <div class="slider-point" :class="{'active' : i === 2}"></div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="slider-arrow left">
+            <font-awesome-icon icon="fa-solid fa-chevron-left" />
+        </div>
+        <div class="slider-arrow right">
+            <font-awesome-icon icon="fa-solid fa-chevron-right" />
         </div>
     </div>
 </template>
@@ -30,6 +42,8 @@ import JumboImage from './JumboImage.vue';
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/variables.scss';
+
     h1 {
         font-weight: 400;
         font-size: 4rem;
@@ -39,5 +53,41 @@ import JumboImage from './JumboImage.vue';
             font-style: italic;
         }
     }
+
+    .slider-point{
+        width: 7px;
+        height: 7px;
+        border-radius: 3px;
+        background-color: $secondary;
+        cursor: pointer;
+
+        &.active {
+            transform: scale(1.5);
+        }
+    }
+
+    .slider-arrow {
+        background-color: $secondary;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 20px;
+        width: 20px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .7rem;
+        &.left {
+            left: 30px;
+        }
+
+        &.right {
+            right: 30px;
+        }
+    }
+
+
 
 </style>
