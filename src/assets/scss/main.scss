@@ -3,10 +3,22 @@
 
 
 .btn {
-    font-size: .6rem;
+    font-size: .8rem;
     padding: .7rem 2rem;
     letter-spacing: 1px;
     border-radius: 0px;
+
+    &.btn-primary:hover {
+        background-color: $secondary;
+        border-color: $secondary;
+        color: white;
+    }
+
+    &.btn-outline:hover {
+        background-color: $secondary;
+        border-color: $secondary;
+        color: white;
+    }
 }
 
 .btn-outline {
@@ -16,3 +28,4 @@
 .letter-spacing {
     letter-spacing: 2px;
 }
+
