@@ -6,7 +6,8 @@
             </a>
 
             <ul class="navbar-nav ms-auto flex-row gap-5 me-5">
-                <li v-for="link in navLinks" :key="link" class="nav-item">
+                <li v-for="link in navLinks" :key="link" class="nav-item position-relative">
+                    <span class="hover-line"></span>
                     <a class="nav-link text-black" href="#">{{link}}</a>
                 </li>
             </ul>
@@ -39,6 +40,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @import '../assets/scss/variables.scss';
+
     nav {
         background-color: rgb(255, 255, 255);
         z-index: 5;
@@ -51,6 +54,33 @@
         .navbar-brand {
             img {
                 width: 100px;
+            }
+        }
+
+        li {
+
+            a {
+                position: relative;
+                z-index: 2;
+            }
+            .hover-line {
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+                background-color: $primary;
+                opacity: .8;
+                height: 7px;
+                z-index: 0;
+                width: 100%;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 400ms ease-in-out;
+            }
+
+            &:hover {
+                .hover-line {
+                    transform: scaleX(1);
+                }
             }
         }
     }

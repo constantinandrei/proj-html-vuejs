@@ -7,7 +7,9 @@
                 <div class="tr-left"></div>
                 <div class="tr-right"></div>
             </div>
-            <img :src="`img/${imgSrc}`" alt="">
+            <div class="overflow-hidden h-100">
+                <img :src="`img/${imgSrc}`" alt="">
+            </div>
             <div class="post-title py-3">
                 {{ articleTitle }}
             </div>
@@ -34,7 +36,13 @@
 
 <style lang="scss" scoped>
     img {
-        width: 100%
+        width: 100%;
+        transition: transform 400ms ease-in-out;
+        overflow: hidden;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     .position-absolute {
@@ -43,6 +51,7 @@
         height: 300px;
         max-width: 60px;
         overflow: hidden;
+        z-index: 2;
         .green {
             background-color: rgb(192, 225, 208);
             width: 55px;
