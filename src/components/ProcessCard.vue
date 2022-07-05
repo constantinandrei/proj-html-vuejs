@@ -31,7 +31,7 @@
 
 <style lang="scss" scoped>
     .square {
-        width: 50%;
+        width: 140px;
         aspect-ratio: 1 / 1;
         background-color: rgb(250, 247, 241);
         border-radius: 50%;
@@ -42,5 +42,12 @@
 
     .my-card-text {
         font-size: .7rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    .my-card-title {
+        position: relative;
+        z-index: 2;
     }
 </style>

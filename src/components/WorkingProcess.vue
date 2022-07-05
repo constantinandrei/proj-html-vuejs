@@ -21,13 +21,15 @@
                     :icon-color="'#EB6950'"
                     :card-title="'So we draw along'" ></ProcessCard>
                 </div>
-                <div class="my-position-absolute">
+                
+                <div class="my-position-absolute" id="my-animation">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1095.3 126">
                         <path
                             d="M2.3 58s70 50.4 177 52c101.5 1.5 145.1-20.7 170-31.8 5.9-2.6 38.9-20.5 38.9-20.5 3.8-2.8 72.7-43.4 159.4-43.7s132.1 29.3 162.3 45.4c0 0 26.6 14.5 36.7 19.3 2.9 1.4 64.7 29.3 169.7 30.3s166-46.3 178-50"
                             fill="none" stroke-width="2" stroke="#f1cfc6" />
                     </svg>
                 </div>
+                <div class="my-position-absolute" :class="{'animate-background': myDivPosition < 700}"></div>
             </div>
         </div>
     </div>
@@ -37,7 +39,22 @@
 import ProcessCard from './ProcessCard.vue';
     export default {
     name: "WorkingProcess",
-    components: { ProcessCard }
+    data(){
+        return {
+            myDivPosition: null
+        }
+    },
+    components: { ProcessCard },
+    methods: {
+        rsetScrollY() {
+            const myDiv = document.getElementById('my-animation');
+            this.myDivPosition = Math.round(myDiv.getBoundingClientRect().top)
+        }
+    },
+
+    mounted(){
+        window.addEventListener('scroll', this.rsetScrollY)
+    }
 }
 </script>
 
@@ -48,6 +65,12 @@ import ProcessCard from './ProcessCard.vue';
         right: 8%;
         bottom: 0;
         left: 8%;
+
+        &.animate-background {
+            left: unset;
+            background-color: white;
+            animation: widthOfBackground linear 2000ms forwards;
+        }
     }
 
     h2 {
@@ -58,5 +81,10 @@ import ProcessCard from './ProcessCard.vue';
             font-weight: bold;
             font-style: italic;
         }
+    }
+
+    @keyframes widthOfBackground {
+        from {width: 100%;}
+        to {width: 0}
     }
 </style>
